@@ -189,41 +189,50 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\udder.svg":[["udder.4a35ff42.svg","images/udder.svg"],"images/udder.svg"],"./..\\images\\apples.svg":[["apples.89433cc4.svg","images/apples.svg"],"images/apples.svg"],"./..\\images\\heart.svg":[["heart.47dcc97a.svg","images/heart.svg"],"images/heart.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\images\\product\\mobile-icecream.png":[["mobile-icecream.c24e0444.png","images/product/mobile-icecream.png"],"images/product/mobile-icecream.png"],"./..\\images\\product\\mobile-ice-coffee.png":[["mobile-ice-coffee.3e80da8b.png","images/product/mobile-ice-coffee.png"],"images/product/mobile-ice-coffee.png"],"./..\\images\\product\\mobile-milkshakes.png":[["mobile-milkshakes.c1ca9719.png","images/product/mobile-milkshakes.png"],"images/product/mobile-milkshakes.png"],"./..\\images\\product\\dots-products.png":[["dots-products.6ce18366.png","images/product/dots-products.png"],"images/product/dots-products.png"],"./..\\images\\about\\mobile-sectionbg.png":[["mobile-sectionbg.d0834067.png","images/about/mobile-sectionbg.png"],"images/about/mobile-sectionbg.png"],"./..\\images\\about\\mobile-sectionbg@2x.png":[["mobile-sectionbg@2x.a164c325.png","images/about/mobile-sectionbg@2x.png"],"images/about/mobile-sectionbg@2x.png"],"./..\\images\\about\\desktop-sectionbg.png":[["desktop-sectionbg.444014ca.png","images/about/desktop-sectionbg.png"],"images/about/desktop-sectionbg.png"],"./..\\images\\about\\desktop-sectionbg@2x.png":[["desktop-sectionbg@2x.b79c0bbe.png","images/about/desktop-sectionbg@2x.png"],"images/about/desktop-sectionbg@2x.png"],"./..\\images\\icon-send.svg":[["icon-send.4d88145b.svg","images/icon-send.svg"],"images/icon-send.svg"],"./..\\images\\udder.svg":[["udder.4a35ff42.svg","images/udder.svg"],"images/udder.svg"],"./..\\images\\apples.svg":[["apples.89433cc4.svg","images/apples.svg"],"images/apples.svg"],"./..\\images\\heart.svg":[["heart.47dcc97a.svg","images/heart.svg"],"images/heart.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"modal.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]')
+  };
+  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+  }
+})();
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
+
+require("./modal");
 
 (function () {
   var menuBtnRef = document.querySelector("[data-menu-button]");
   var mobileMenuRef = document.querySelector("[data-menu]");
   var mobileBtnClose = document.querySelector("[data-menu-close]");
-  var Btn1 = document.querySelector("[bat-0]");
-  var Btn2 = document.querySelector("[bat-0]");
-  var Btn3 = document.querySelector("[bat-0]");
-  var Btn4 = document.querySelector("[bat-0]");
-  var Btn5 = document.querySelector("[bat-0]");
-  var Btn6 = document.querySelector("[bat-0]");
+  var BtnClose = document.querySelector("[bat-close]");
+  var MenuRef = document.querySelector("[bat-ref]");
   menuBtnRef.addEventListener("click", function () {
     mobileMenuRef.classList.toggle("is-open");
-    Btn1.classList.toggle("bat-0");
-    Btn2.classList.toggle("bat-0");
-    Btn3.classList.toggle("bat-0");
-    Btn4.classList.toggle("bat-0");
-    Btn5.classList.toggle("bat-0");
-    Btn6.classList.toggle("bat-0");
+    BtnClose.classList.toggle("bat-close");
+    MenuRef.classList.toggle("bat-ref");
+  });
+  MenuRef.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle("is-open");
+    BtnClose.classList.toggle("bat-close");
+    MenuRef.classList.toggle("bat-ref");
   });
   mobileBtnClose.addEventListener('click', function () {
     mobileMenuRef.classList.toggle("is-open");
-    Btn1.classList.toggle("bat-0");
-    Btn2.classList.toggle("bat-0");
-    Btn3.classList.toggle("bat-0");
-    Btn4.classList.toggle("bat-0");
-    Btn5.classList.toggle("bat-0");
-    Btn6.classList.toggle("bat-0");
+    BtnClose.classList.toggle("bat-close");
+    MenuRef.classList.toggle("bat-ref");
   });
 })();
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./sass/main.scss":"sass/main.scss","./modal":"modal.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -251,7 +260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57172" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50332" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
