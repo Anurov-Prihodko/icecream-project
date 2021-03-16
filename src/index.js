@@ -42,6 +42,6 @@ import './sass/main.scss';
 
 import './modal';
 
-// $(document).ready(function(){
-//   $('.customer-reviews__wrappers').slick();
-// });
+$(document).ready(function(){
+  $('.customer-reviews__wrappers').slick();
+});
