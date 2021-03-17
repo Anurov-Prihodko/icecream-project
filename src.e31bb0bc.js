@@ -217,11 +217,11 @@ require("./sass/main.scss");
   var mobileBtnClose = document.querySelector('[data-menu-close]');
   var BtnClose = document.querySelector('[bat-close]');
   var MenuRef = document.querySelector('[bat-ref]');
-  var idExit1 = document.querySelector('[id-Exit1]');
-  var idExit2 = document.querySelector('[id-Exit2]');
-  var idExit3 = document.querySelector('[id-Exit3]');
-  var idExit4 = document.querySelector('[id-Exit4]');
-  var idExit5 = document.querySelector('[id-Exit5]');
+  var idExit1 = document.querySelector('[id-exit1]');
+  var idExit2 = document.querySelector('[id-exit2]');
+  var idExit3 = document.querySelector('[id-exit3]');
+  var idExit4 = document.querySelector('[id-exit4]');
+  var idExit5 = document.querySelector('[id-exit5]');
   menuBtnRef.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
@@ -318,7 +318,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61502" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62302" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
