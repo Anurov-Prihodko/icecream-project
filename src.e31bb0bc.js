@@ -217,11 +217,11 @@ require("./sass/main.scss");
   var mobileBtnClose = document.querySelector('[data-menu-close]');
   var BtnClose = document.querySelector('[bat-close]');
   var MenuRef = document.querySelector('[bat-ref]');
-  var idExit1 = document.querySelector('[id-exit1]');
-  var idExit2 = document.querySelector('[id-exit2]');
-  var idExit3 = document.querySelector('[id-exit3]');
-  var idExit4 = document.querySelector('[id-exit4]');
-  var idExit5 = document.querySelector('[id-exit5]');
+  var idexit1 = document.querySelector('[id-exit1]');
+  var idexit2 = document.querySelector('[id-exit2]');
+  var idexit3 = document.querySelector('[id-exit3]');
+  var idexit4 = document.querySelector('[id-exit4]');
+  var idexit5 = document.querySelector('[id-exit5]');
   menuBtnRef.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
@@ -232,27 +232,27 @@ require("./sass/main.scss");
     BtnClose.classList.toggle('bat-close');
     MenuRef.classList.toggle('bat-ref');
   });
-  idExit1.addEventListener('click', function () {
+  idexit1.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
     MenuRef.classList.toggle('bat-ref');
   });
-  idExit2.addEventListener('click', function () {
+  idexit2.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
     MenuRef.classList.toggle('bat-ref');
   });
-  idExit3.addEventListener('click', function () {
+  idexit3.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
     MenuRef.classList.toggle('bat-ref');
   });
-  idExit4.addEventListener('click', function () {
+  idexit4.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
     MenuRef.classList.toggle('bat-ref');
   });
-  idExit5.addEventListener('click', function () {
+  idexit5.addEventListener('click', function () {
     mobileMenuRef.classList.toggle('is-open');
     BtnClose.classList.toggle('bat-close');
     MenuRef.classList.toggle('bat-ref');
@@ -318,7 +318,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62302" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62872" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
