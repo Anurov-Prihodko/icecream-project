@@ -122,13 +122,6 @@ button {
   }
 }
 
-.hero-center {
-  position: absolute;
-  display: flex;
-  padding-left: auto;
-  margin-right: auto;
-}
-
 .hero-case {
   position: relative;
   min-width: 170px;
@@ -520,7 +513,6 @@ button {
   .backdrop {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
   }
 }
 
@@ -528,7 +520,6 @@ button {
   transform: translatex(100%);
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
 }
 
 .background-close {
@@ -544,20 +535,17 @@ button {
   .background-close {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
   }
 }
 
 .background-close p {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
 }
 
-.background-close.bat-close {
+.bat-close {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
 }
 
 .mod-icon {
@@ -619,8 +607,6 @@ button {
 .mobil-item {
   transition: var(--transition-duration) var(--timing-function);
   border-top: 1px solid var(--bg-ice-cream);
-  padding-bottom: 11px;
-  padding-top: 13px;
 }
 .mobil-item:hover .mobil-link:hover, .mobil-item:focus .mobil-link:focus {
   color: var(--main-dark-color);
@@ -631,6 +617,7 @@ button {
 
 .mobil-link {
   transition: var(--transition-duration) var(--timing-function);
+  padding: 15px 0;
   font-family: DM Sans;
   font-style: normal;
   font-weight: bold;
@@ -1129,8 +1116,7 @@ button {
 .products-ice-cream-icon {
   width: 16px;
   height: 14px;
-  color: var(--main-dark-color);
-  fill: currentColor;
+  fill: var(--main-dark-color);
   transition: fill var(--transition-duration) var(--timing-function);
 }
 
@@ -1678,10 +1664,6 @@ li {
   list-style: none;
 }
 
-.image-bottom .item {
-  max-width: auto;
-}
-
 .gallery {
   padding-left: 20px;
   padding-right: 20px;
@@ -1876,8 +1858,9 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   margin: auto;
+  width: 56px;
+  justify-content: space-between;
 }
 
 .slick-active {
@@ -2559,10 +2542,9 @@ li {
   height: 100%;
   border-radius: 50%;
   cursor: pointer;
-  fill: currentColor;
-  color: var(--text-color-dark-bg);
+  fill: var(--text-color-dark-bg);
   background-color: var(--color-social-link);
-  transition: fill var(--transition-duration) var(--timing-function), color var(--transition-duration) var(--timing-function), background-color var(--transition-duration) var(--timing-function);
+  transition: fill var(--transition-duration) var(--timing-function), background-color var(--transition-duration) var(--timing-function);
 }
 .social-link-footer:hover, .social-link-footer:focus {
   fill: var(--text-color-dark-bg);
