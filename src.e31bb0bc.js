@@ -117,7 +117,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"modal.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector("[data-modal-open]"),
+    closeModalBtn: document.querySelector("[data-modal-close]"),
+    modal: document.querySelector("[data-modal]")
+  };
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+
+  function toggleModal() {
+    document.body.classList.toggle("modal-open");
+    refs.modal.classList.toggle("is-hidden");
+  }
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -189,41 +204,93 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\udder.svg":[["udder.4a35ff42.svg","images/udder.svg"],"images/udder.svg"],"./..\\images\\apples.svg":[["apples.89433cc4.svg","images/apples.svg"],"images/apples.svg"],"./..\\images\\heart.svg":[["heart.47dcc97a.svg","images/heart.svg"],"images/heart.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./..\\images\\product\\mobile-icecream.png":[["mobile-icecream.c24e0444.png","images/product/mobile-icecream.png"],"images/product/mobile-icecream.png"],"./..\\images\\product\\mobile-icecream@2x.png":[["mobile-icecream@2x.b046e714.png","images/product/mobile-icecream@2x.png"],"images/product/mobile-icecream@2x.png"],"./..\\images\\product\\tablet-icecream.png":[["tablet-icecream.dfe11901.png","images/product/tablet-icecream.png"],"images/product/tablet-icecream.png"],"./..\\images\\product\\tablet-icecream@2x.png":[["tablet-icecream@2x.4bb5b352.png","images/product/tablet-icecream@2x.png"],"images/product/tablet-icecream@2x.png"],"./..\\images\\product\\desktop-icecream.png":[["desktop-icecream.6c90e9d8.png","images/product/desktop-icecream.png"],"images/product/desktop-icecream.png"],"./..\\images\\product\\desktop-icecream@2x.png":[["desktop-icecream@2x.d098242a.png","images/product/desktop-icecream@2x.png"],"images/product/desktop-icecream@2x.png"],"./..\\images\\product\\mobile-ice-coffee.png":[["mobile-ice-coffee.3e80da8b.png","images/product/mobile-ice-coffee.png"],"images/product/mobile-ice-coffee.png"],"./..\\images\\product\\mobile-ice-coffee@2x.png":[["mobile-ice-coffee@2x.1c6f5d60.png","images/product/mobile-ice-coffee@2x.png"],"images/product/mobile-ice-coffee@2x.png"],"./..\\images\\product\\tablet-ice-coffee.png":[["tablet-ice-coffee.3c31fb1f.png","images/product/tablet-ice-coffee.png"],"images/product/tablet-ice-coffee.png"],"./..\\images\\product\\tablet-ice-coffee@2x.png":[["tablet-ice-coffee@2x.0b541e08.png","images/product/tablet-ice-coffee@2x.png"],"images/product/tablet-ice-coffee@2x.png"],"./..\\images\\product\\desktop-ice-coffee.png":[["desktop-ice-coffee.8e9f2322.png","images/product/desktop-ice-coffee.png"],"images/product/desktop-ice-coffee.png"],"./..\\images\\product\\desktop-ice-coffee@2x.png":[["desktop-ice-coffee@2x.a3b55ceb.png","images/product/desktop-ice-coffee@2x.png"],"images/product/desktop-ice-coffee@2x.png"],"./..\\images\\product\\mobile-milkshakes.png":[["mobile-milkshakes.c1ca9719.png","images/product/mobile-milkshakes.png"],"images/product/mobile-milkshakes.png"],"./..\\images\\product\\mobile-milkshakes@2x.png":[["mobile-milkshakes@2x.878d0932.png","images/product/mobile-milkshakes@2x.png"],"images/product/mobile-milkshakes@2x.png"],"./..\\images\\product\\tablet-milkshakes.png":[["tablet-milkshakes.c38a0479.png","images/product/tablet-milkshakes.png"],"images/product/tablet-milkshakes.png"],"./..\\images\\product\\tablet-milkshakes@2x.png":[["tablet-milkshakes@2x.857b9494.png","images/product/tablet-milkshakes@2x.png"],"images/product/tablet-milkshakes@2x.png"],"./..\\images\\product\\desktop-milkshakes.png":[["desktop-milkshakes.5530de03.png","images/product/desktop-milkshakes.png"],"images/product/desktop-milkshakes.png"],"./..\\images\\product\\desktop-milkshakes@2x.png":[["desktop-milkshakes@2x.2d942e00.png","images/product/desktop-milkshakes@2x.png"],"images/product/desktop-milkshakes@2x.png"],"./..\\images\\product\\dots-products.png":[["dots-products.6ce18366.png","images/product/dots-products.png"],"images/product/dots-products.png"],"./..\\images\\about\\mobile-sectionbg.png":[["mobile-sectionbg.d0834067.png","images/about/mobile-sectionbg.png"],"images/about/mobile-sectionbg.png"],"./..\\images\\about\\mobile-sectionbg@2x.png":[["mobile-sectionbg@2x.a164c325.png","images/about/mobile-sectionbg@2x.png"],"images/about/mobile-sectionbg@2x.png"],"./..\\images\\about\\desktop-sectionbg.png":[["desktop-sectionbg.444014ca.png","images/about/desktop-sectionbg.png"],"images/about/desktop-sectionbg.png"],"./..\\images\\about\\desktop-sectionbg@2x.png":[["desktop-sectionbg@2x.b79c0bbe.png","images/about/desktop-sectionbg@2x.png"],"images/about/desktop-sectionbg@2x.png"],"./..\\images\\icon-send.svg":[["icon-send.4d88145b.svg","images/icon-send.svg"],"images/icon-send.svg"],"./..\\images\\udder.svg":[["udder.4a35ff42.svg","images/udder.svg"],"images/udder.svg"],"./..\\images\\apples.svg":[["apples.89433cc4.svg","images/apples.svg"],"images/apples.svg"],"./..\\images\\heart.svg":[["heart.47dcc97a.svg","images/heart.svg"],"images/heart.svg"],"C:\\Users\\user\\Documents\\GitHub\\parcel-project-template\\src\\images\\quotes.png":[["quotes.13d917a9.png","images/quotes.png"],"images/quotes.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
+
+require("./modal");
 
 require("./sass/main.scss");
 
 (function () {
-  var menuBtnRef = document.querySelector("[data-menu-button]");
-  var mobileMenuRef = document.querySelector("[data-menu]");
-  var mobileBtnClose = document.querySelector("[data-menu-close]");
-  var Btn1 = document.querySelector("[bat-0]");
-  var Btn2 = document.querySelector("[bat-0]");
-  var Btn3 = document.querySelector("[bat-0]");
-  var Btn4 = document.querySelector("[bat-0]");
-  var Btn5 = document.querySelector("[bat-0]");
-  var Btn6 = document.querySelector("[bat-0]");
-  menuBtnRef.addEventListener("click", function () {
-    mobileMenuRef.classList.toggle("is-open");
-    Btn1.classList.toggle("bat-0");
-    Btn2.classList.toggle("bat-0");
-    Btn3.classList.toggle("bat-0");
-    Btn4.classList.toggle("bat-0");
-    Btn5.classList.toggle("bat-0");
-    Btn6.classList.toggle("bat-0");
+  var menuBtnRef = document.querySelector('[data-menu-button]');
+  var mobileMenuRef = document.querySelector('[data-menu]');
+  var mobileBtnClose = document.querySelector('[data-menu-close]');
+  var BtnClose = document.querySelector('[bat-close]');
+  var MenuRef = document.querySelector('[bat-ref]');
+  var idexit1 = document.querySelector('[data-id-exit1]');
+  var idexit2 = document.querySelector('[data-id-exit2]');
+  var idexit3 = document.querySelector('[data-id-exit3]');
+  var idexit4 = document.querySelector('[data-id-exit4]');
+  var idexit5 = document.querySelector('[data-id-exit5]');
+  menuBtnRef.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
+  });
+  MenuRef.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
+  });
+  idexit1.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
+  });
+  idexit2.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
+  });
+  idexit3.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
+  });
+  idexit4.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
+  });
+  idexit5.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
   });
   mobileBtnClose.addEventListener('click', function () {
-    mobileMenuRef.classList.toggle("is-open");
-    Btn1.classList.toggle("bat-0");
-    Btn2.classList.toggle("bat-0");
-    Btn3.classList.toggle("bat-0");
-    Btn4.classList.toggle("bat-0");
-    Btn5.classList.toggle("bat-0");
-    Btn6.classList.toggle("bat-0");
+    mobileMenuRef.classList.toggle('is-open');
+    BtnClose.classList.toggle('bat-close');
+    MenuRef.classList.toggle('bat-ref');
   });
 })();
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+$(document).ready(function () {
+  $('#menu1').on('click', 'a', function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+});
+$(document).ready(function () {
+  $('#menu2').on('click', 'a', function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+});
+$('.single-item').slick({
+  autoplay: true,
+  arrows: false,
+  dots: true,
+  dotsClass: 'slick-dots'
+});
+},{"./modal":"modal.js","./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -251,7 +318,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57172" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
